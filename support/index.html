@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tahan Support</title>
+<meta name="description" content="Help with tahan: contact, purchases, auto-log and backups.">
+<style>
+/* Layout: the app's Settings look. Serif wordmark and headings, grouped rows on a warm ground, one readable column.
+   Colours and fonts mirror src/constants/design.ts (UI / DarkUI) and the app's Georgia headings. */
+:root {
+  --bg: #F7F5F0; --surface: #FFFEFA; --ink: #282620; --muted: #77736A;
+  --line: #E5E1D8; --accent: #9E3D34; --soft: #EDE9E1; --selected: #F1E3DC;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #17191C; --surface: #24262A; --ink: #F5F0E7; --muted: #B5B2AA;
+  --line: #414348; --accent: #F0A398; --soft: #303237; --selected: #493431; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #17191C; --surface: #24262A; --ink: #F5F0E7; --muted: #B5B2AA;
+  --line: #414348; --accent: #F0A398; --soft: #303237; --selected: #493431; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.6 var(--sans); padding: 0 16px; -webkit-text-size-adjust: 100%; }
+main { max-width: 40rem; margin: 0 auto; padding-block: 2.5rem 3.5rem; display: flex; flex-direction: column; gap: 2rem; }
+h1, h2 { font-family: var(--serif); font-weight: 700; color: var(--ink); line-height: 1.2; margin: 0; text-wrap: balance; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.25rem; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2rem; display: flex; flex-direction: column; gap: .4rem; }
+section { display: flex; flex-direction: column; gap: .7rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+strong { font-weight: 600; }
+
+header { display: flex; flex-direction: column; gap: .5rem; }
+.wordmark { font-family: var(--serif); font-weight: 700; font-size: 1.6rem; color: var(--accent); line-height: 1; }
+.dated { color: var(--muted); font-size: .875rem; }
+.lead { font-size: 1.06rem; }
+.summary { background: var(--selected); border-radius: 14px; padding: 1rem 1.15rem; }
+
+/* Grouped rows, like the app's SettingsGroup. */
+.group { display: flex; flex-direction: column; gap: .45rem; }
+.group-title { font-size: .8125rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-left: .25rem; }
+.rows { list-style: none; padding: 0; margin: 0; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.row { display: flex; gap: .75rem; align-items: flex-start; justify-content: space-between; padding: .85rem 1rem; }
+.row + .row { border-top: 1px solid var(--line); }
+.row-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.row-title { font-weight: 600; }
+.row-detail { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+.who { flex: none; font-size: .78rem; font-weight: 600; white-space: nowrap; padding: .2rem .55rem; border-radius: 999px; background: var(--soft); color: var(--muted); }
+.who.you { background: var(--selected); color: var(--accent); }
+
+.email { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: .875rem; border-top: 1px solid var(--line); padding-top: 1.1rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="wordmark">tahan</span>
+    <h1>Support</h1>
+    <p class="dated">Updated 5 November 2026</p>
+  </header>
+
+  <p class="summary"><strong>Need help?</strong> Email <a class="email" href="mailto:myappdev.2025@gmail.com?subject=tahan%20support">myappdev.2025@gmail.com</a>. Tell us your iPhone model, iOS version and what happened. We usually reply within 2 working days.</p>
+
+  <section aria-labelledby="pro">
+    <h2 id="pro">tahan Pro and the free trial</h2>
+    <ul>
+      <li>tahan is free to use for 30 days from the first time you open it. After that, tahan Pro is needed to keep adding new things. Everything you already logged stays visible, and you can still back it up.</li>
+      <li><strong>Bought Pro on a new phone or after reinstalling?</strong> Open tahan Pro from the Profile tab and tap <strong>Restore purchases</strong>. Use the same Apple Account you bought it with.</li>
+      <li><strong>Cancel Monthly:</strong> on your iPhone, go to Settings → your name → Subscriptions → tahan Pro. Cancel at least 24 hours before it renews.</li>
+      <li><strong>Refunds</strong> are handled by Apple at <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="autolog">
+    <h2 id="autolog">Auto-log isn't logging</h2>
+    <p>Auto-log uses an automation in Apple's Shortcuts app. Set it up from Profile → Automation → <strong>Notification Auto-Log</strong> or <strong>Wallet Auto-Log</strong>. If payments stop appearing, check:</p>
+    <ul>
+      <li>In Shortcuts → Automation, the tahan automation is on and set to <strong>Run Immediately</strong>.</li>
+      <li>Notifications are on for your bank app or Wallet, with previews shown.</li>
+      <li>Your bank app isn't set to <strong>Require Face ID</strong>. When it is, iOS hides the alert text, so there's nothing to log.</li>
+    </ul>
+    <p>Notification Auto-Log works with DBS, OCBC, UOB (money received), Trust and Amex. Wallet Auto-Log works with any card in Apple Wallet.</p>
+  </section>
+
+  <section aria-labelledby="import">
+    <h2 id="import">Importing statements</h2>
+    <p>tahan reads PDF statements and screenshots from DBS, OCBC, UOB and Amex, on your iPhone. You check every row before it's saved. If a statement reads wrongly, email us the bank name and what went wrong. Please don't send the statement itself.</p>
+  </section>
+
+  <section aria-labelledby="backup">
+    <h2 id="backup">Moving to a new phone</h2>
+    <p>Your data lives only on your iPhone. To move it, go to Profile → App data → Data management → <strong>Back up all data</strong> and save the file somewhere safe, for example Files or AirDrop. On the new phone, open the same screen and tap <strong>Restore from backup</strong>. Restoring replaces everything on that phone.</p>
+  </section>
+
+  <section aria-labelledby="privacy">
+    <h2 id="privacy">Privacy</h2>
+    <p>No account, no bank login and no trackers. Read the <a href="../privacy/">privacy policy</a>.</p>
+  </section>
+
+  <footer>tahan is made in Singapore.</footer>
+</main>
+</body>
+</html>
