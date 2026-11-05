@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tahan Privacy Policy</title>
+<meta name="description" content="How tahan handles your data: your records stay on your iPhone.">
+<style>
+/* Layout: the app's Settings look. Serif wordmark and headings, grouped rows on a warm ground, one readable column.
+   Colours and fonts mirror src/constants/design.ts (UI / DarkUI) and the app's Georgia headings. */
+:root {
+  --bg: #F7F5F0; --surface: #FFFEFA; --ink: #282620; --muted: #77736A;
+  --line: #E5E1D8; --accent: #9E3D34; --soft: #EDE9E1; --selected: #F1E3DC;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #17191C; --surface: #24262A; --ink: #F5F0E7; --muted: #B5B2AA;
+  --line: #414348; --accent: #F0A398; --soft: #303237; --selected: #493431; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #17191C; --surface: #24262A; --ink: #F5F0E7; --muted: #B5B2AA;
+  --line: #414348; --accent: #F0A398; --soft: #303237; --selected: #493431; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.6 var(--sans); padding: 0 16px; -webkit-text-size-adjust: 100%; }
+main { max-width: 40rem; margin: 0 auto; padding-block: 2.5rem 3.5rem; display: flex; flex-direction: column; gap: 2rem; }
+h1, h2 { font-family: var(--serif); font-weight: 700; color: var(--ink); line-height: 1.2; margin: 0; text-wrap: balance; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.25rem; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2rem; display: flex; flex-direction: column; gap: .4rem; }
+section { display: flex; flex-direction: column; gap: .7rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+strong { font-weight: 600; }
+
+header { display: flex; flex-direction: column; gap: .5rem; }
+.wordmark { font-family: var(--serif); font-weight: 700; font-size: 1.6rem; color: var(--accent); line-height: 1; }
+.dated { color: var(--muted); font-size: .875rem; }
+.lead { font-size: 1.06rem; }
+.summary { background: var(--selected); border-radius: 14px; padding: 1rem 1.15rem; }
+
+/* Grouped rows, like the app's SettingsGroup. */
+.group { display: flex; flex-direction: column; gap: .45rem; }
+.group-title { font-size: .8125rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); padding-left: .25rem; }
+.rows { list-style: none; padding: 0; margin: 0; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.row { display: flex; gap: .75rem; align-items: flex-start; justify-content: space-between; padding: .85rem 1rem; }
+.row + .row { border-top: 1px solid var(--line); }
+.row-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.row-title { font-weight: 600; }
+.row-detail { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+.who { flex: none; font-size: .78rem; font-weight: 600; white-space: nowrap; padding: .2rem .55rem; border-radius: 999px; background: var(--soft); color: var(--muted); }
+.who.you { background: var(--selected); color: var(--accent); }
+
+.email { font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: .875rem; border-top: 1px solid var(--line); padding-top: 1.1rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="wordmark">tahan</span>
+    <h1>Privacy Policy</h1>
+    <p class="dated">Effective 5 November 2026</p>
+  </header>
+
+  <p class="lead">tahan is a budgeting app for iPhone. Your accounts, transactions, budgets, bills, goals and loans are kept in a database on your iPhone. We don't run servers that store your data, you don't need to make an account, and there are no analytics or advertising trackers.</p>
+
+  <p class="summary"><strong>In short:</strong> tahan goes online for two things only. If you have an account in another currency, it downloads exchange rates. It also shows tahan Pro prices and checks your purchase. Neither one sends your transactions, balances or account names anywhere.</p>
+
+  <section class="group" aria-labelledby="where">
+    <h2 id="where">Where your data goes</h2>
+    <ul class="rows">
+      <li class="row"><div class="row-text"><span class="row-title">Your records</span><span class="row-detail">Accounts, transactions, budgets, bills, goals, loans, categories and settings. Stored on your iPhone, inside tahan.</span></div><span class="who you">Only you</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Imported screenshots and PDF statements</span><span class="row-detail">Read on your iPhone. The text is pulled out on the device, and the file is never uploaded.</span></div><span class="who you">Only you</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Bank and Apple Wallet alerts for auto-log</span><span class="row-detail">The Shortcuts app passes the alert text to tahan on your iPhone. On iPhones with Apple Intelligence, Apple's on-device model helps read the alert. It runs on the phone and sends nothing out.</span></div><span class="who you">Only you</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Profile photo</span><span class="row-detail">Copied into tahan on your iPhone.</span></div><span class="who you">Only you</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Free trial start date</span><span class="row-detail">On your iPhone, in tahan and in the iOS Keychain.</span></div><span class="who you">Only you</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Backups and CSV exports</span><span class="row-detail">Saved wherever you choose to save or send them.</span></div><span class="who">You and who you share with</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">Exchange rate requests</span><span class="row-detail">Only if you have an account in another currency. Sent to Frankfurter, asking only for SGD rates.</span></div><span class="who">Frankfurter</span></li>
+      <li class="row"><div class="row-text"><span class="row-title">tahan Pro purchases</span><span class="row-detail">Handled by Apple. RevenueCat checks your purchase.</span></div><span class="who">Apple, RevenueCat</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="rates">
+    <h2 id="rates">Exchange rates</h2>
+    <p>If you keep an account in another currency, for example a USD account with US$500, tahan shows it in your SGD totals as about S$670. It gets the latest rates from the free <a href="https://frankfurter.dev" rel="noopener">Frankfurter</a> service. The request only asks for rates from SGD. It does not include your amounts, merchants or any other data. Like any website, Frankfurter can see your IP address when your phone makes the request.</p>
+    <p>If all your accounts are in SGD, tahan never makes this request. When you spend abroad on an SGD card, you enter the SGD amount your bank charged, so no rates are needed.</p>
+  </section>
+
+  <section aria-labelledby="purchases">
+    <h2 id="purchases">Purchases</h2>
+    <p>tahan Pro is sold through the App Store. Apple handles payment, and we never see your card or Apple ID details. Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">privacy policy</a> applies to that payment.</p>
+    <p>We use <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a> to show tahan Pro prices, check whether you have bought tahan Pro, and restore purchases. RevenueCat receives an anonymous ID created by the app, your App Store purchase records, and basic device details such as iOS version and country. It does not receive your name, email or any budgeting data.</p>
+  </section>
+
+  <section aria-labelledby="autolog">
+    <h2 id="autolog">Auto-log</h2>
+    <p>Auto-log is optional. You set it up by adding a shortcut in Apple's Shortcuts app; the setup links open shortcuts hosted on Apple's iCloud. When a bank or Wallet alert arrives, for example "S$4.50 at Kopitiam", the shortcut hands that text to tahan, which logs the S$4.50 on your iPhone. tahan does not read your other notifications.</p>
+  </section>
+
+  <section aria-labelledby="notifications">
+    <h2 id="notifications">Notifications</h2>
+    <p>tahan reminds you about bill, card and loan due dates, goals, budgets, payday, logging your spending and your free trial. It also confirms when auto-log records a payment. All of these are scheduled on your iPhone by iOS. None are sent from a server.</p>
+  </section>
+
+  <section aria-labelledby="backups">
+    <h2 id="backups">iPhone backups</h2>
+    <p>If iCloud Backup is on, iOS includes tahan's data in your iPhone backup, the same as for most apps. That backup is stored by Apple under your Apple Account and Apple's <a href="https://www.apple.com/legal/privacy/" rel="noopener">privacy policy</a> applies. You can turn this off for your whole iPhone in Settings → your name → iCloud → iCloud Backup.</p>
+  </section>
+
+  <section aria-labelledby="delete">
+    <h2 id="delete">Deleting your data</h2>
+    <ul>
+      <li>In tahan, go to <strong>Profile → Data management → Erase all data</strong>. This removes your records, profile photo, reminders and preferences.</li>
+      <li>Deleting the app removes its database from your iPhone.</li>
+      <li>The free trial start date stays in the iOS Keychain so that reinstalling doesn't restart the trial. It holds only a date.</li>
+      <li>Backup files you saved elsewhere stay there until you delete them.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="children">
+    <h2 id="children">Children</h2>
+    <p>tahan isn't made for children under 13.</p>
+  </section>
+
+  <section aria-labelledby="changes">
+    <h2 id="changes">Changes</h2>
+    <p>If this policy changes, we will update this page and its effective date. If a change means tahan starts sending your data somewhere new, we will tell you in the app first.</p>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <p>Questions about privacy: <span class="email">myappdev.2025@gmail.com</span></p>
+  </section>
+
+  <footer>tahan is made in Singapore.</footer>
+</main>
+</body>
+</html>
